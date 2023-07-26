@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 
-int _precision(const char *format, int *i, va_list list)
+int _precision(const char *format, int *i, va_list list);
 /** _precision - Calculates the precision for printing
  * @format: Formatted string in which to print the arguments from 
  * @i: List of arguments to be printed
