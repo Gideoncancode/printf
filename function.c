@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 
+void print_char(va_list types, char buffer[],int flags, int width, int precision, int size);
 /************** PRINT CHAR ************/
 
 /** print_char - Prints a char
@@ -19,6 +20,7 @@ int print_char(va_list types, char buffer[],int flags, int width, int precision,
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
+void print_string(va_list types, char buffer[],int flags, int width, int precision, int size)
 /************ PRINT A STRING *************/
 /** print_string - Prints a string
  * @types: List a of arguments
@@ -73,6 +75,8 @@ int print_string(va_list types, char buffer[],int flags, int width, int precisio
 
 	return (write(1, str, length));
 }
+
+void print_percent(va_list types, char buffer[],int flags, int width, int precision, int size)
 /******* PRINT PERCENT SIGN ************/
 /** print_percent - Prints a percent sign
  * @types: List of arguments
@@ -94,6 +98,7 @@ int print_percent(va_list types, char buffer[],int flags, int width, int precisi
 	UNUSED(size);
 	return (write(1, "%%", 1));
 }
+
 /************* PRINT INT **************/
 /** print_int - Print int
  * @types: List of arguments
