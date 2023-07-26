@@ -1,13 +1,12 @@
 #include "main.h"
 
-int _flags(const char *format, int *i);
-/** _flags - Calculates the active flags
- * @format:Formatted string in which to print the arguments from 
- * @i:takes a parameter
- * Return:Always flags
+/** get_flags - Calculates the active flags
+ * @format: Formatted string in which to print the arguments from 
+ * @i: takes a parameter
+ * Return: Always flags
  */
 
-int _flags(const char *format, int *i)
+int get_flags(const char *format, int *i)
 {
 	int j, curr_i;
 	int flags = 0;
